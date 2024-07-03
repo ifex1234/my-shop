@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #666;
+  min-height: 38.75rem;
+}
+.first_row {
+  color: beige;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 2.625rem 20px;
+}
+.second_row {
+  color: beige;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 2.625rem 20px;
+}
