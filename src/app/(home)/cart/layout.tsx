@@ -1,5 +1,5 @@
+import Footer from "@/components/core/footer";
 import Navbar from "@/components/core/navbar";
-import TopNav from "@/components/core/topNav";
 
 export default function Layout({
   children,
@@ -7,12 +7,12 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <body className={` container flex flex-col`}>
+    <body className={` w-full md:container flex flex-col`}>
       <nav>
-        <TopNav />
         <Navbar />
       </nav>
       <div className=" w-full">{children}</div>
+      <Footer />
     </body>
   );
 }
