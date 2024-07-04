@@ -25,7 +25,7 @@ export function CarouselHome() {
       <CarouselContent>
         {data.map((data) => (
           <CarouselItem key={data.id}>
-            <div>
+            <div className=" h-[520px] my-2">
               <Card>
                 <CardContent className="flex flex-col aspect-square bg-transparent pt-1">
                   <Image

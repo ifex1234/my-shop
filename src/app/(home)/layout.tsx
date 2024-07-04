@@ -17,9 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} container flex flex-col`}>
-        <nav></nav>
-        <div className=" w-full">{children}</div>
+      <body className={`${inter.className}flex flex-col`}>
+        <div className=" w-full md:container ">{children}</div>
         <div className=" w-full">
           <Footer />
         </div>

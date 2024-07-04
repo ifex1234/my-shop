@@ -14,7 +14,7 @@ export default function Home() {
       <Separator />
       <Navbar />
       <Separator />
-      <div className=" flex flex-col h-[550px]">
+      <div className=" flex flex-row h-[540px] my-2 gap-1">
         <CarouselHome /> <HomeAside />
       </div>
     </main>

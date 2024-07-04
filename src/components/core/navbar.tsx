@@ -14,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { appliances_content } from "@/lib/assets/appliances";
-// import { Drawer } from "../core/drawer";
+import { Drawer } from "../core/drawer";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -207,9 +207,9 @@ function Navbar() {
         <Button className="hidden lg:block border-purple-500 border-2 border-purple-500/100 . bg-white text-purple-700 hover:bg-purple-700 hover:text-white">
           Sign in
         </Button>
-        {/* <span className="block lg:hidden">
+        <span className="block lg:hidden">
           <Drawer />
-        </span> */}
+        </span>
       </div>
     </nav>
   );

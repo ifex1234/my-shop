@@ -5,7 +5,7 @@ import styles from "../../lib/styles/footer.module.css";
 
 function Footer() {
   return (
-    <div className={` ${styles.container}`}>
+    <div className={` ${styles.container} `}>
       <Newsletter />
       <div className={`${styles.first_row}`}>
         <div>
