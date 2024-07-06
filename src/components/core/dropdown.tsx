@@ -49,7 +49,7 @@ export function Dropdown() {
             <span>Profile</span>
           </Link>
 
-          <DropdownMenuItem className="cursor-pointer">
+          <DropdownMenuItem className="cursor-pointer hover:bg-slate-300 flex flex-row h-10 w-full items-center gap-x-0 px-3 rounded-md">
             <LuSettings className="mr-2 h-4 w-4" />
             <span>Settings</span>
           </DropdownMenuItem>

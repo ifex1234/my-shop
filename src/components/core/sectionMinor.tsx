@@ -15,7 +15,7 @@ export const SectionMinor = () => {
           <Link href="product-page" key={idx}>
             <div className={`${style.content}`}>
               <div>
-                <Image src={item.Image} alt={item.title} />
+                <Image src={item.Image} alt={item.title} priority />
               </div>
               <div>
                 <p>{item.title}</p>

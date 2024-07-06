@@ -1,14 +1,19 @@
 import styles from "@/lib/styles/sectionborderless.module.scss";
-import Image from "next/image";
-type Props2 = {
+import Image, { StaticImageData } from "next/image";
+type Props = {
   id: number;
   title: string;
-  image: string;
+  image: StaticImageData;
   price: number;
-  header: string;
+}[];
+type Props2 = {
+  header?: string;
+  arrayItem: Props;
 };
 
-export const SectionBorderless = ({ arrayItem, header }: Props2) => {
+export const SectionBorderless: React.FC<Props2> = (props) => {
+  const { header, arrayItem } = props;
+
   return (
     <div className={`${styles.container}`}>
       <div className=" px-2">
@@ -16,7 +21,7 @@ export const SectionBorderless = ({ arrayItem, header }: Props2) => {
       </div>
 
       <div className={`${styles.array_wrapper}`}>
-        {arrayItem.slice(0, 6).map((item: Props2) => (
+        {arrayItem.slice(0, 6).map((item) => (
           <div key={item.id} className={`${styles.array_content}`}>
             <div>
               <Image src={item.image} alt={item.title} />

@@ -1,7 +1,7 @@
 import { productsData } from "@/lib/assets/section2";
-// import Progress from "@/components/ui/progress";
 import styles from "@/lib/styles/sectionbig.module.scss";
 import Image from "next/image";
+import { Progress } from "../ui/progress";
 
 const SectionBig = () => {
   type Props = {
@@ -18,8 +18,13 @@ const SectionBig = () => {
     <div className={`${styles.container}`}>
       {productsData.slice(0, 6).map((content) => (
         <div className={`${styles.arrayItem}`} key={content.id}>
-          <div>
-            <Image src={content.image} alt={content.title} />
+          <div className=" h-3/5">
+            <Image
+              className="h-full"
+              src={content.image}
+              alt={content.title}
+              priority
+            />
           </div>
           <div>
             <p>{content.title}</p>
@@ -29,7 +34,11 @@ const SectionBig = () => {
           </div>
           <div>
             <p> Items left:{content.itemLeft}</p>
-            {/* <Progress value={content.itemLeftValue} /> */}
+            <Progress
+              className="text-red-500"
+              value={content.itemLeftValue}
+              max={content.itemLeftValue + 100}
+            />
           </div>
         </div>
       ))}

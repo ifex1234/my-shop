@@ -2,19 +2,20 @@
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
   margin: 5px 0;
-  padding: 5px 0;
-  gap: 0.3125rem;
+  padding: 5px 10px;
+  gap: 0.4125rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: white;
+  height: 100%;
 }
 .container {
-  overflow: scroll;
-  scroll-behavior: smooth;
+  // overflow: scroll;
+  // scroll-behavior: smooth;
   margin-bottom: 0.625rem;
   background-color: white;
   display: flex;
-  height: 16.25rem;
+  height: 18.25rem;
   width: 100%;
   flex-direction: row;
 }
