@@ -11,7 +11,10 @@ function TopNav() {
     <div className={`${style.container}`}>
       <span>Home</span>
       <div className={`${style.inputdiv}`}>
-        <Input className=" w-10/12" />{" "}
+        <Input
+          className=" w-10/12"
+          placeholder="Search products, brands and categories"
+        />
         <Button className=" bg-purple-500 hover:bg-purple-700 text-white">
           Search
         </Button>

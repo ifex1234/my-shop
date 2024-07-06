@@ -20,6 +20,7 @@
     "@radix-ui/react-progress": "^1.1.0",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-spring/web": "^9.7.3",
     "@reduxjs/toolkit": "^2.2.6",
     "@tanstack/react-form": "^0.25.1",
     "@tanstack/zod-form-adapter": "^0.25.1",
