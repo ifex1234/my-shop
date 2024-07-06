@@ -1,21 +1,25 @@
 import Newsletter from "./newsletter";
-// import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material";
+import { LuYoutube, LuFacebook, LuTwitter, LuInstagram } from "react-icons/lu";
 import Link from "next/link";
-import styles from "../../lib/styles/footer.module.css";
+import styles from "../../lib/styles/footer.module.scss";
 
 function Footer() {
   return (
     <div className={` ${styles.container} `}>
       <Newsletter />
-      <div className={`${styles.first_row}`}>
+
+      <div className={`${styles.first_row} container`}>
+        {" "}
         <div>
-          <p>NEED HELP?</p>{" "}
-          <p>
-            <Link href="">Chat with us</Link> <br />
-            <Link href="">Help Center</Link> <br />
-            <Link href="">Contact Us</Link> <br />{" "}
-          </p>
-          <p>USEFUL LINKS</p>{" "}
+          <div className={`${styles.layer2}`}>
+            <h4>NEED HELP?</h4>{" "}
+            <p>
+              <Link href="">Chat with us</Link> <br />
+              <Link href="">Help Center</Link> <br />
+              <Link href="">Contact Us</Link> <br />{" "}
+            </p>
+          </div>
+          <h4>USEFUL LINKS</h4>{" "}
           <p>
             <Link href="">Service Center</Link> <br />
             <Link href="">How to shop?</Link> <br />
@@ -30,7 +34,7 @@ function Footer() {
           </p>{" "}
         </div>
         <div>
-          <p>ABOUT KAPHstores</p>
+          <h4>ABOUT KAPHstores</h4>
           <p>
             <Link href="">About us</Link> <br />
             <Link href="">Terms and Conditions</Link> <br />
@@ -44,7 +48,7 @@ function Footer() {
           <br />
         </div>
         <div>
-          <p>MAKE MONEY WITH KAPH</p>
+          <h4>MAKE MONEY WITH KAPH</h4>
           <p>
             <Link href="">Sell on Store</Link> <br />
             <Link href="">Vendor hub</Link> <br />
@@ -53,12 +57,15 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className={`${styles.second_row}`}>
-        <p>JOIN US ON</p>
-        <div>
-          {/* <Facebook sx={{ mr: "10px" }} />
-//                 <Twitter sx={{ mr: "10px" }} /> <YouTube sx={{ mr: "10px" }} />{" "}
-//                 <Instagram sx={{ mr: "10px" }} /> */}
+      <div className={`${styles.second_row} container`}>
+        <div className={`${styles.social_container}`}>
+          <h4>JOIN US ON</h4>
+          <div className={`${styles.social}`}>
+            <LuFacebook size={20} fill="blue" />
+            <LuTwitter size={20} fill="cyan" />
+            <LuYoutube size={20} fill="red" />
+            <LuInstagram size={20} fill="burlywood" />
+          </div>
         </div>
         <p>PAYMENT METHODS & DELIVERY PARTNERS</p>
         <div />

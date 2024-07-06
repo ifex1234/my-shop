@@ -48,8 +48,8 @@ function Newsletter() {
       </div>
 
       <div className=" w-full md:w-1/3 flex h-full flex-row pt-3 px-0">
-        <div className=" w-1/2" />
-        <div className="w-1/2">
+        <div className=" w-1/3" />
+        <div className="w-2/3">
           <div className="w-full">
             <p>DOWNLOAD KAPHstore FREE APP</p>
             <p>Get access to exclusive offers!</p>
