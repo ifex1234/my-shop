@@ -5,3 +5,11 @@
   border-radius: 0.3125rem;
   padding-top: 0.3125rem;
 }
+
+.container2 {
+  height: 3.125rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

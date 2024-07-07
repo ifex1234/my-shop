@@ -1,4 +1,4 @@
-import { Typography, Box } from "@mui/material";
+import style from "@/lib/styles/subheader.module.scss";
 
 type Props = {
   item1: string;
@@ -7,24 +7,14 @@ type Props = {
 };
 const SubHeader = ({ item1, item2, color }: Props) => {
   return (
-    <Box
-      width="100%"
-      bgcolor={color}
-      height={50}
-      display="flex"
-      flexDirection="row"
-      justifyContent="space-between"
-      color="#fff"
-      px={2}
-      alignItems="center"
-    >
-      <Box>
-        <Typography> {item1}</Typography>
-      </Box>
-      <Box>
-        <Typography>{item2}</Typography>
-      </Box>
-    </Box>
+    <div className={`${style.container2}`}>
+      <div>
+        <p> {item1}</p>
+      </div>
+      <div>
+        <p>{item2}</p>
+      </div>
+    </div>
   );
 };
 
