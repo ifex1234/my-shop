@@ -30,12 +30,6 @@ import image_04 from "../../../../public/images/seller/1 (21).jpg";
 import image_05 from "../../../../public/images/seller/1 (22).jpg";
 import image_06 from "../../../../public/images/seller/1 (23).jpg";
 
-import image_011 from "../../../../public/images/light/batteries.jpg";
-import image_021 from "../../../../public/images/light/generators.jpg";
-import image_031 from "../../../../public/images/light/inverters.jpg";
-import image_041 from "../../../../public/images/light/phone-grade.jpg";
-import image_051 from "../../../../public/images/light/powerpacks.jpg";
-import image_061 from "../../../../public/images/light/rechargeable-power-supply.jpg";
 import { StaticImageData } from "next/image";
 
 type Props = {
@@ -76,13 +70,4 @@ export const Seller = [
   { id: 4, image: image_04, price: 2599, title: "TWS Wireless Bluetooth H" },
   { id: 5, image: image_05, price: 4850, title: "Straight Jeans Men's Pant" },
   { id: 6, image: image_06, price: 1590000, title: "Bluetti AC200MAX" },
-];
-
-export const LightOn = [
-  { id: 1, image: image_011 },
-  { id: 2, image: image_021 },
-  { id: 3, image: image_031 },
-  { id: 4, image: image_041 },
-  { id: 5, image: image_051 },
-  { id: 6, image: image_061 },
 ];

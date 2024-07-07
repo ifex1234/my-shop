@@ -6,37 +6,42 @@ type Prop = {
 export const Navlink: Prop = [
   {
     id: 0,
-    href: "",
+    href: "/categories/appliances",
     label: "Appliances",
   },
   {
     id: 1,
-    href: "Phones-Tablets",
+    href: "/categories/phones-tablets",
     label: "Phones & Tablets",
   },
   {
     id: 2,
-    href: "Computers",
+    href: "/categories/computers",
     label: "Computers",
   },
   {
     id: 3,
-    href: "Groceries",
+    href: "/categories/groceries",
     label: "Groceries",
   },
   {
     id: 4,
-    href: "Electronics",
+    href: "/categories/electronics",
     label: "Electronics",
   },
   {
     id: 5,
-    href: "Fashion",
+    href: "/categories/fashion",
     label: "Fashion",
   },
   {
     id: 6,
-    href: "Health-Beauty",
+    href: "/categories/health-Beauty",
     label: "Health & Beauty",
+  },
+  {
+    id: 7,
+    href: "/categories/home-office",
+    label: "Home and office",
   },
 ];

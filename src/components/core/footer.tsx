@@ -56,19 +56,28 @@ function Footer() {
             <Link href="">Become a Logistics Service Partner</Link> <br />
           </p>
         </div>
-      </div>
-      <div className={`${styles.second_row} container`}>
         <div className={`${styles.social_container}`}>
-          <h4>JOIN US ON</h4>
+          <h4>CONNECT WITH US</h4>
           <div className={`${styles.social}`}>
-            <LuFacebook size={20} fill="blue" />
-            <LuTwitter size={20} fill="cyan" />
-            <LuYoutube size={20} fill="red" />
-            <LuInstagram size={20} fill="burlywood" />
+            <Link href="fb.com">
+              {" "}
+              <LuFacebook size={20} fill="blue" className=" cursor-pointer" />
+            </Link>
+            <Link href="twitter.com">
+              <LuTwitter size={20} fill="cyan" className=" cursor-pointer" />
+            </Link>
+            <Link href="youtube.com">
+              <LuYoutube size={20} fill="red" className=" cursor-pointer" />
+            </Link>
+            <Link href="instagram.com">
+              <LuInstagram
+                size={20}
+                fill="burlywood"
+                className=" cursor-pointer"
+              />
+            </Link>
           </div>
         </div>
-        <p>PAYMENT METHODS & DELIVERY PARTNERS</p>
-        <div />
       </div>
       <div className=" text-center">designed by ifex</div>
     </div>

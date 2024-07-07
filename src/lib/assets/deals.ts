@@ -1,7 +1,6 @@
 import image1 from "../../../public/images/deals/300x400-fashion-deals.jpg";
 import image2 from "../../../public/images/deals/appliances-deals_300x400.png";
 import image3 from "../../../public/images/deals/beauty-deals_300x400.png";
-import image4 from "../../../public/images/deals/electronics-deals_300x400.png";
 import image5 from "../../../public/images/deals/phone-deals_300x400.png";
 import image6 from "../../../public/images/deals/supermarket-deals_300x400.png";
 
@@ -11,20 +10,6 @@ import image_3 from "../../../public/images/deals/1 (16).jpg";
 import image_4 from "../../../public/images/deals/1 (17).jpg";
 import image_5 from "../../../public/images/deals/1 (18).jpg";
 import image_6 from "../../../public/images/deals/1 (19).jpg";
-
-import image_11 from "../../../public/images/deals/android-phones_300x400.png";
-import image_12 from "../../../public/images/deals/android-tablets_300x400v2.png";
-import image_13 from "../../../public/images/deals/fold-phones_300x400.png";
-import image_14 from "../../../public/images/deals/ipads_300x400.png";
-import image_15 from "../../../public/images/deals/iphones_300x400.png";
-import image_16 from "../../../public/images/deals/note-phones_300x400.png";
-
-import image_121 from "../../../public/images/deals/power-deals_300x400.png";
-import image_122 from "../../../public/images/deals/computing-deals_300x400.png";
-import image_123 from "../../../public/images/deals/electronics-deals_300x400.png";
-import image_124 from "../../../public/images/deals/gaming-deals.png";
-import image_125 from "../../../public/images/deals/kids-corner_300x400.png";
-import image_126 from "../../../public/images/deals/fitness-deals_300x400.png";
 
 import image_001 from "../../../public/images/deals/choplife/1.jpg";
 import image_002 from "../../../public/images/deals/choplife/1 (1).jpg";
@@ -71,7 +56,7 @@ export const deals1: Prop1 = [
   },
   {
     // title: "Top Electronics Deals",
-    image: image4,
+    image: image3,
     id: 3,
   },
   {
@@ -99,48 +84,6 @@ export const PhoneDeals: Prop = [
   { image: image_4, price: 101500, id: 4, title: "Oppo A78 Mist Black" },
   { image: image_5, price: 80500, id: 5, title: 'Infinix Hot 30i 6.6" HD' },
   { image: image_6, price: 90500, id: 6, title: 'Infinix Hot 30i 6.6" HD' },
-];
-
-export const MobileDeals: Prop1 = [
-  {
-    image: image_11,
-    id: 1,
-    // title: 'Top Android Deals'
-  },
-  {
-    image: image_12,
-    id: 2,
-    // title: 'Top Android Tablets'
-  },
-  {
-    image: image_13,
-    id: 3,
-    // title: 'Top Foldables'
-  },
-  {
-    image: image_14,
-    id: 4,
-    // title: 'Top Ipad Deals'
-  },
-  {
-    image: image_15,
-    id: 5,
-    // title: 'Top Iphone Deals'
-  },
-  {
-    image: image_16,
-    id: 6,
-    // title: 'Top Note Deals'
-  },
-];
-
-export const Otherdeals: Prop1 = [
-  { id: 1, image: image_121 },
-  { id: 2, image: image_122 },
-  { id: 3, image: image_123 },
-  { id: 4, image: image_124 },
-  { id: 5, image: image_125 },
-  { id: 6, image: image_126 },
 ];
 
 export const Choplife: Prop = [

@@ -7,7 +7,7 @@
   gap: 0.625rem;
   margin-bottom: 0.625rem;
   width: 100%;
-  //  height={{ xs: "290px", sm: "158px", md: "700px", lg: "240px" }}
+  height: 15rem;
 }
 .map_wrapper {
   display: inline-flexbox;
@@ -17,6 +17,7 @@
   cursor: pointer;
   margin: 5px 0;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+  width: 12.5rem;
 }
 .content {
   height: 1.875rem;

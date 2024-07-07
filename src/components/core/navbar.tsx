@@ -16,44 +16,6 @@ import {
 import { appliances_content } from "@/lib/assets/appliances";
 import { Drawer } from "../core/drawer";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
-
 function Navbar() {
   const pathname = usePathname();
   return (
@@ -68,136 +30,83 @@ function Navbar() {
         <NavigationMenu className="text-slate-700 ">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Appliances
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/appliances" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Appliances
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Phones & Tablets
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/phones-tablets" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Phones & Tablets
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Computers
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/computers" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Computers
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Groceries
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/groceries" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Groceries
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Electronics
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/electronics" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Electronics
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Fashion
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/fashion" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Fashion
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className=" hover:text-purple-700 hover:text-base  bg-purple-600 text-white">
-                Health & Beauty
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] p-2 md:w-[300px] md:grid-cols-2 lg:w-[500px] ">
-                  {appliances_content.map((component, idx) => (
-                    <ListItem
-                      key={idx}
-                      href={component}
-                      className=" hover:bg-purple-400 hover:text-white"
-                    >
-                      {component}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link href="/health-beauty" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Health and beauty
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link href="/home-office" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                >
+                  Home and office
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -217,28 +126,28 @@ function Navbar() {
 
 export default Navbar;
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
+// const ListItem = React.forwardRef<
+//   React.ElementRef<"a">,
+//   React.ComponentPropsWithoutRef<"a">
+// >(({ className, title, children, ...props }, ref) => {
+//   return (
+//     <li>
+//       <NavigationMenuLink asChild>
+//         <a
+//           ref={ref}
+//           className={cn(
+//             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+//             className
+//           )}
+//           {...props}
+//         >
+//           <div className="text-sm font-medium leading-none">{title}</div>
+//           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+//             {children}
+//           </p>
+//         </a>
+//       </NavigationMenuLink>
+//     </li>
+//   );
+// });
+// ListItem.displayName = "ListItem";
