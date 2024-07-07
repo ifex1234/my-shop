@@ -50,33 +50,39 @@ import { StaticImageData } from "next/image";
 
 type Prop1 = {
   image: StaticImageData;
-  id?: number;
+  id: number;
 }[];
 
 export const deals1: Prop1 = [
   {
     // title: "Top Fashion Deals",
     image: image1,
+    id: 0,
   },
   {
     // title: "Top Appliance Deals",
     image: image2,
+    id: 1,
   },
   {
     // title: "Top Beauty Deals",
     image: image3,
+    id: 2,
   },
   {
     // title: "Top Electronics Deals",
     image: image4,
+    id: 3,
   },
   {
     // title: "Top Phones Deals",
     image: image5,
+    id: 4,
   },
   {
     // title: "Top Supermarket Deals",
     image: image6,
+    id: 5,
   },
 ];
 

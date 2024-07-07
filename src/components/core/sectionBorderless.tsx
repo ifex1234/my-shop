@@ -24,7 +24,7 @@ export const SectionBorderless: React.FC<Props2> = (props) => {
         {arrayItem.slice(0, 6).map((item) => (
           <div key={item.id} className={`${styles.array_content}`}>
             <div>
-              <Image src={item.image} alt={item.title} />
+              <Image src={item.image} alt={item.title} priority />
             </div>
             <div className=" my-1 px-1">
               <p className=" text-xs">{item.title}</p>

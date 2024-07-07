@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import styles from "@/lib/styles/subheader.module.scss";
 
 type props = {
   title: string;
@@ -7,17 +7,9 @@ type props = {
 
 const SubHeader2 = ({ title, color }: props) => {
   return (
-    <Box
-      width="100%"
-      height="50px"
-      bgcolor={color}
-      color="white"
-      px={2}
-      borderRadius={1}
-      pt={1}
-    >
-      <Typography variant="h5">{title} </Typography>
-    </Box>
+    <div className={`${styles.container} ${color}`}>
+      <p>{title} </p>
+    </div>
   );
 };
 

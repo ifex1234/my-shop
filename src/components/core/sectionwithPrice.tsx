@@ -1,21 +1,23 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "../../lib/styles/sectionwithprice.module.scss";
+
 type Props = {
   id: number;
-  image: string;
-  title: string;
+  title?: string;
+  image: StaticImageData;
+}[];
+type Props2 = {
+  header?: string;
+  arrayItem: Props;
 };
-export const Sectionwithprice = ({ arrayItem }) => {
+export const Sectionwithprice: React.FC<Props2> = (props) => {
+  const { arrayItem } = props;
   return (
     <div className={`${styles.container}`}>
-      {arrayItem.map((contents: Props) => (
+      {arrayItem.map((contents) => (
         <div className={`${styles.map_wrapper}`} key={contents.id}>
-          <div
-          // width={{ xs: "90px", sm: "100px", md: "250px", lg: "165px" }}
-          // height={{ xs: "125px", sm: "100px", md: "150px" }}
-          // margin={{ xs: "5px 6.5px", sm: "0.2vw", md: "10px", lh: "5px" }}
-          >
-            <Image src={contents.image} alt={contents.title} priority />
+          <div className={`${styles.image_wrapper}`}>
+            <Image src={contents.image} alt={contents.title!} priority />
             <div className={`${styles.content}`}>
               <p className=" font-semibold text-xs">{contents.title}</p>
             </div>
