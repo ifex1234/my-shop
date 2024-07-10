@@ -9,7 +9,7 @@ import Link from "next/link";
 function TopNav() {
   return (
     <div className={`${style.container}`}>
-      <span>Home</span>
+      <span>Kaphstore</span>
       <div className={`${style.inputdiv}`}>
         <Input
           className=" w-10/12"

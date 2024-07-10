@@ -45,3 +45,28 @@
   justify-content: space-between;
   padding: 2.625rem 20px;
 }
+@media screen and (max-height: 920px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #666;
+    min-height: 58.75rem;
+  }
+  .first_row {
+    color: beige;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2.625rem 20px;
+    flex-wrap: wrap;
+
+    div {
+      width: 50%;
+    }
+    h4 {
+      font-size: medium;
+      font-weight: 600;
+    }
+  }
+}

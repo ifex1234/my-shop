@@ -20,14 +20,14 @@ import { productsData } from "@/lib/assets/section2";
 
 export default function Home() {
   return (
-    <main className=" rounded-sm">
+    <main className=" rounded-sm mb-5">
       <TopAds />
       <Separator />
       <TopNav />
       <Separator />
       <Navbar />
       <Separator />
-      <div className=" flex flex-row h-[540px] my-2 gap-1">
+      <div className=" flex flex-row  my-2 gap-1">
         <CarouselHome /> <HomeAside />
       </div>
       <SectionMinor />

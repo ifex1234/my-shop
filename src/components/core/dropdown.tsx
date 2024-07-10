@@ -20,17 +20,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FaAngleDown, FaUser } from "react-icons/fa6";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export function Dropdown() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const router = useRouter();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className=" flex flex-row gap-x-2 border-none ring-0"
+          className=" lg:flex flex-row gap-x-2 border-none ring-0 hidden"
           variant="outline"
         >
           <FaUser />

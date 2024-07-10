@@ -9,7 +9,6 @@ function Footer() {
       <Newsletter />
 
       <div className={`${styles.first_row} container`}>
-        {" "}
         <div>
           <div className={`${styles.layer2}`}>
             <h4>NEED HELP?</h4>{" "}

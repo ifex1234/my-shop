@@ -13,17 +13,42 @@ import { Navlink } from "@/lib/assets/navlink";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Separator } from "../ui/separator";
+import { LuLogOut, LuHeart, LuUser, LuBook, LuLogIn } from "react-icons/lu";
+import { useState } from "react";
 
 export function Drawer() {
+  const myAccount = [
+    {
+      id: 0,
+      label: "profile",
+      href: "/profile",
+      icon: <LuUser className="mr-2 h-4 w-4" />,
+    },
+    {
+      id: 1,
+      label: "Orders",
+      href: "/orders",
+      icon: <LuBook className="mr-2 h-4 w-4" />,
+    },
+    {
+      id: 2,
+      label: "Favourites",
+      href: "/favourites",
+      icon: <LuHeart className="mr-2 h-4 w-4" />,
+    },
+  ];
   const pathname = usePathname();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <MdMenu size={30} />
+        <MdMenu fill="white" size={30} />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader className="mt-5 md:hidden">
-          <Input placeholder="Search..." />
+          <div className="w-10/12">
+            <Input placeholder="Search products and categories" />
+          </div>
         </SheetHeader>
         <span className="flex gap-3 flex-col w-full my-7">
           {Navlink.map((link) => (
@@ -38,11 +63,42 @@ export function Drawer() {
           ))}
           <Separator />
         </span>
+
+        <span className="flex gap-3 flex-col w-full my-7">
+          <h3>My Account</h3>
+          {myAccount.map((link) => (
+            <SheetClose className="flex float-start" key={link.id} asChild>
+              <Link
+                className=" hover:bg-slate-300 cursor-pointer flex flex-row h-10 w-full items-center gap-x-0 px-3 rounded-md"
+                href={link.href}
+              >
+                {link.icon}
+                <span>{link.label}</span>
+              </Link>
+            </SheetClose>
+          ))}
+          <Separator />
+        </span>
+
         <SheetFooter>
           <SheetClose asChild>
-            <Button className=" w-full border-purple-500 border-2 border-purple-500/100 . bg-white text-purple-700 hover:bg-purple-700 hover:text-white">
-              Sign in
-            </Button>
+            {isLoggedIn ? (
+              <Link
+                className="bg-red-500 w-56 text-white hover:bg-red-700 cursor-pointer flex flex-row h-10 items-center gap-x-3 px-3 rounded-md"
+                href="/login"
+              >
+                <LuLogOut />
+                <span>Log out</span>
+              </Link>
+            ) : (
+              <Link
+                className="bg-purple-600 text-white hover:bg-purple-800 w-56 md:w-80 cursor-pointer flex flex-row h-10 items-center gap-x-3 px-3 rounded-md"
+                href="/login"
+              >
+                <LuLogIn />
+                <span>Log in</span>
+              </Link>
+            )}
           </SheetClose>
         </SheetFooter>
       </SheetContent>

@@ -3,36 +3,33 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { appliances_content } from "@/lib/assets/appliances";
 import { Drawer } from "../core/drawer";
+import { FaCartShopping } from "react-icons/fa6";
 
 function Navbar() {
   const pathname = usePathname();
   return (
     <nav className="flex flex-row items-center h-16 justify-between text-slate-600 w-full bg-purple-600">
       <Link href="/">
-        <span className=" origin-center  hover:rotate-45 text-white px-2">
-          Kaphstore
+        <span className=" origin-center  hover:rotate-45 text-white px-2 md:hidden xl:block">
+          Home
         </span>
       </Link>
 
-      <span className="hidden lg:flex">
+      <span className="hidden lg:flex ">
         <NavigationMenu className="text-slate-700 ">
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/appliances" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                  className={`${navigationMenuTriggerStyle()}  hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
                 >
                   Appliances
                 </NavigationMenuLink>
@@ -113,9 +110,13 @@ function Navbar() {
       </span>
 
       <div className=" flex justify-between items-center flex-row gap-5 px-2">
-        <Button className="hidden lg:block border-purple-500 border-2 border-purple-500/100 . bg-white text-purple-700 hover:bg-purple-700 hover:text-white">
-          Sign in
-        </Button>
+        <Link
+          className="flex flex-row items-center gap-x-2 justify-end relative md:hidden"
+          href="/cart"
+        >
+          <FaCartShopping fill="white" size={20} />
+          <span className=" absolute -top-3 left-4 text-white">0</span>
+        </Link>
         <span className="block lg:hidden">
           <Drawer />
         </span>

@@ -48,15 +48,15 @@ function Newsletter() {
       </div>
 
       <div className=" w-full md:w-1/3 flex h-full flex-row pt-3 px-0">
-        <div className=" w-1/3" />
+        <div className=" w-1/3 hidden md:block" />
         <div className="w-2/3">
           <div className="w-full">
             <p>DOWNLOAD KAPHstore FREE APP</p>
             <p>Get access to exclusive offers!</p>
           </div>
           <div className="w-full flex flex-row gap-3">
-            <Image height={100} src={img2} alt="app store logo" />
-            <Image height={100} src={img3} alt="play store logo" />
+            <Image width={80} src={img2} alt="app store logo" />
+            <Image height={80} src={img3} alt="play store logo" />
           </div>
         </div>
       </div>

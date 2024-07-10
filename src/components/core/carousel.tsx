@@ -18,15 +18,15 @@ export function CarouselHome() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-3/4 h-[450px]"
+      className="lg:w-3/4 lg:h-[450px] w-full h-52 md:h-96 my-5"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent>
         {data.map((data) => (
           <CarouselItem key={data.id}>
-            <div className=" h-[520px] my-2">
-              <Card>
+            <div className=" h-56 md:h-96">
+              <Card className="h-full w-full ">
                 <CardContent className="flex flex-col aspect-square bg-transparent pt-1">
                   <Image
                     className=" w-full object-fill"

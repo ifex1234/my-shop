@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+  flex-wrap: wrap;
+}
+.arrayCont {
+  display: flex;
+  flex-direction: column;
+  width: 11.25rem;
+  height: 13.75rem;
+  margin: 0.625rem 0;
+}
+.arrayItem {
+  height: 12.5rem;
+  width: 6.25rem;
+  object-fit: contain;
+}
+@media screen and (max-width: 57.5rem) {
+  .arrayCont {
+    width: 5.9rem;
+    height: 13.75rem;
+    margin: 0.925rem 0.325rem;
+    font-size: small;
+  }
+}
