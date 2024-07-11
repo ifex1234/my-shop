@@ -2,12 +2,11 @@ import styles from "@/lib/styles/subheader.module.scss";
 
 type props = {
   title: string;
-  color: string;
 };
 
-const SubHeader2 = ({ title, color }: props) => {
+const SubHeader2 = ({ title }: props) => {
   return (
-    <div className={`${styles.container} ${color}`}>
+    <div className={`${styles.container}`}>
       <p>{title} </p>
     </div>
   );

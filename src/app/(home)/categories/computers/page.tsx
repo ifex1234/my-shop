@@ -1,11 +1,13 @@
 import Categories from "@/components/core/Categories";
-import React from "react";
 import { Groceries } from "@/lib/assets/categories/supermaket";
+import React from "react";
 
-export default function Page() {
+function page() {
   return (
-    <div>
+    <div className=" md:container">
       <Categories arrayItem={Groceries} />
     </div>
   );
 }
+
+export default page;

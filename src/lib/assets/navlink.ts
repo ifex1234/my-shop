@@ -1,6 +1,14 @@
 type Prop = {
   id: number;
-  href: string;
+  href:
+    | "/categories/appliances"
+    | "/categories/computers"
+    | "/categories/electronics"
+    | "/categories/fashion"
+    | "/categories/groceries"
+    | "/categories/health-beauty"
+    | "/categories/mobile-tablet"
+    | "/categories/home-office";
   label: string;
 }[];
 export const Navlink: Prop = [
@@ -11,7 +19,7 @@ export const Navlink: Prop = [
   },
   {
     id: 1,
-    href: "/categories/phones-tablets",
+    href: "/categories/mobile-tablet",
     label: "Phones & Tablets",
   },
   {
@@ -36,7 +44,7 @@ export const Navlink: Prop = [
   },
   {
     id: 6,
-    href: "/categories/health-Beauty",
+    href: "/categories/health-beauty",
     label: "Health & Beauty",
   },
   {

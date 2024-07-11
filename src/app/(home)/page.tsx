@@ -3,7 +3,6 @@ import HomeAside from "@/components/core/homeAside";
 import { SectionBorderless } from "@/components/core/sectionBorderless";
 import SectionBig from "@/components/core/sectionBig";
 import { SectionMinor } from "@/components/core/sectionMinor";
-import { SectionSmall } from "@/components/core/sectionsmall";
 import SubHeader from "@/components/core/subHeader";
 import SubHeader2 from "@/components/core/subHeader2";
 import { PhoneDeals } from "@/lib/assets/deals";
@@ -58,8 +57,6 @@ export default function Home() {
           color={"rgb(173, 12, 170)"}
         />
         <SectionBorderless arrayItem={PhoneDeals} />
-        <SubHeader2 title={"Official store"} color={"rgb(173, 12, 170)"} />
-        <SectionSmall arrayItem={StoreItems} />
         <SubHeader
           item1={"Global Best Sellers"}
           item2={"See all"}

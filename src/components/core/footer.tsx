@@ -8,8 +8,10 @@ function Footer() {
     <div className={` ${styles.container} `}>
       <Newsletter />
 
-      <div className={`${styles.first_row} container`}>
-        <div>
+      <div
+        className={` flex flex-col md:flex-row text-white px-5 gap-4 justify-between py-5 ${styles.first_row}`}
+      >
+        <div className={`${styles.foot}`}>
           <div className={`${styles.layer2}`}>
             <h4>NEED HELP?</h4>{" "}
             <p>
@@ -32,7 +34,7 @@ function Footer() {
             <Link href="">Return Policy</Link> <br />{" "}
           </p>{" "}
         </div>
-        <div>
+        <div className={`${styles.foot}`}>
           <h4>ABOUT KAPHstores</h4>
           <p>
             <Link href="">About us</Link> <br />
@@ -46,7 +48,7 @@ function Footer() {
           </p>
           <br />
         </div>
-        <div>
+        <div className={`${styles.foot}`}>
           <h4>MAKE MONEY WITH KAPH</h4>
           <p>
             <Link href="">Sell on Store</Link> <br />
