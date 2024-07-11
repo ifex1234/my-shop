@@ -1,6 +1,5 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-import StarsIcon from "@mui/icons-material/Stars";
 import {
   MdFacebook,
   //   Twitter,
@@ -60,7 +59,7 @@ function ProductDetails() {
         <div className={`${style.image}`}>
           <Image src={image1} alt="" />
           <span className="flex flex-col my-5 px-5">
-            <p>Share this product</p>
+            <p>Share this product on:</p>
             <span className="flex flex-row gap-x-2">
               <BsTwitter />
               <BsFacebook />
