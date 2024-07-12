@@ -6,13 +6,7 @@ import ContextProvider from "@/components/core/ContextProvider";
 import { TopAds } from "@/components/core/ads";
 import Navbar from "@/components/core/navbar";
 import { Separator } from "@radix-ui/react-separator";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
