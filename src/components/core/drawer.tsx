@@ -53,7 +53,11 @@ export function Drawer() {
           {Navlink.map((link) => (
             <SheetClose className="flex float-start" key={link.id} asChild>
               <Link
-                className={`${pathname === link.href ? "active" : ""} px-2`}
+                className={`${
+                  pathname === `${link.href}`
+                    ? "bg-slate-200 text-purple-700"
+                    : ""
+                } px-2`}
                 href={link.href}
               >
                 {link.label}

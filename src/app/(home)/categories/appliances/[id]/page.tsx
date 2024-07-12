@@ -41,7 +41,13 @@ function Page({ params }: { params: { id: string } }) {
     <div className={`${style.container}`}>
       <div className={`${style.main}`}>
         <div className={`${style.image}`}>
-          <Image width={311} height={311} src={selectedID?.image!} alt="" />
+          <Image
+            width={311}
+            height={311}
+            src={selectedID?.image!}
+            alt=""
+            priority
+          />
           <span className="flex flex-col my-5 px-5">
             <p>Share this product on:</p>
             <span className="flex flex-row gap-x-2">

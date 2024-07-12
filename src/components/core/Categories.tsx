@@ -28,7 +28,7 @@ const Categories: React.FC<Prop> = (ObjArr) => {
           <Link href={`${pathName}/${item.id}`} key={item.id}>
             <div className={`${style.arrayCont}`}>
               <div className={`${style.arrayItem}`}>
-                <Image src={item.image} alt={item.title} />
+                <Image src={item.image} alt={item.title} priority />
               </div>
               <p>{item.title}</p>
               <p>

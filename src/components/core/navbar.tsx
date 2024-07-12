@@ -30,7 +30,11 @@ function Navbar() {
               <NavigationMenuItem key={Links.id}>
                 <Link href={Links.href} legacyBehavior passHref>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()}  hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
+                    className={`${navigationMenuTriggerStyle()} ${
+                      pathname === `${Links.href}`
+                        ? "bg-slate-200 text-purple-700"
+                        : ""
+                    }  hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
                   >
                     {Links.label}
                   </NavigationMenuLink>
