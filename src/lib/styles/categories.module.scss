@@ -4,15 +4,20 @@
   height: auto;
   width: 100%;
   border-radius: 0.3125rem;
-  margin: 0.625rem 0;
+  margin: 1.925rem 0;
   flex-wrap: wrap;
 }
 .arrayCont {
   display: flex;
   flex-direction: column;
-  width: 11.25rem;
+  width: 11rem;
   height: 13.75rem;
-  margin: 0.625rem 0;
+  margin: 0.625rem 0.3125rem;
+  padding: 0.625rem;
+  &:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
 }
 .arrayItem {
   height: 12.5rem;
@@ -25,5 +30,10 @@
     height: 13.75rem;
     margin: 0.925rem 0.325rem;
     font-size: small;
+    &:hover {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2),
+        0 6px 15px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+    }
   }
 }

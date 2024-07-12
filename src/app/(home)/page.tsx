@@ -4,10 +4,9 @@ import { SectionBorderless } from "@/components/core/sectionBorderless";
 import SectionBig from "@/components/core/sectionBig";
 import { SectionMinor } from "@/components/core/sectionMinor";
 import SubHeader from "@/components/core/subHeader";
-import SubHeader2 from "@/components/core/subHeader2";
 import { PhoneDeals } from "@/lib/assets/deals";
 import { Choplife, Gins, BestPrice } from "@/lib/assets/deals";
-import { Seller, StoreItems } from "@/lib/assets/other/store";
+import { Seller } from "@/lib/assets/other/store";
 import { productsData } from "@/lib/assets/section2";
 import TopNav from "@/components/core/topNav";
 
