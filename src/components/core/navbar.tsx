@@ -32,7 +32,7 @@ function Navbar() {
                   <NavigationMenuLink
                     className={`${navigationMenuTriggerStyle()} ${
                       pathname === `${Links.href}`
-                        ? "bg-slate-200 text-purple-700"
+                        ? "bg-slate-200 text-purple-900"
                         : ""
                     }  hover:text-purple-700 hover:text-base hover:bg-slate-200  bg-purple-600 text-white`}
                   >
