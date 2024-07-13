@@ -6,7 +6,6 @@ import ContextProvider from "@/components/core/ContextProvider";
 import { TopAds } from "@/components/core/ads";
 import Navbar from "@/components/core/navbar";
 import { Separator } from "@radix-ui/react-separator";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,17 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}flex flex-col md:container`}>
-        <ClerkProvider>
-          <ContextProvider>
-            <TopAds />
-            <Separator />
-            <Separator />
-            <Navbar />
-            <Separator />
-            <div className=" w-full">{children}</div>
-            <Footer />
-          </ContextProvider>
-        </ClerkProvider>
+        <ContextProvider>
+          <TopAds />
+          <Separator />
+          <Separator />
+          <Navbar />
+          <Separator />
+          <div className=" w-full">{children}</div>
+          <Footer />
+        </ContextProvider>
       </body>
     </html>
   );
