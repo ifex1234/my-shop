@@ -1,12 +1,5 @@
 "use client";
-import {
-  LuLogOut,
-  LuHeart,
-  LuSettings,
-  LuUser,
-  LuBook,
-  LuLogIn,
-} from "react-icons/lu";
+import { LuHeart, LuSettings, LuUser, LuBook } from "react-icons/lu";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,11 +12,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { FaAngleDown, FaUser } from "react-icons/fa6";
-import { useState } from "react";
 import Link from "next/link";
+import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
 
 export function Dropdown() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -70,24 +62,22 @@ export function Dropdown() {
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
-
-        {isLoggedIn ? (
-          <Link
-            className="bg-red-500 text-white hover:bg-red-700 cursor-pointer flex flex-row h-10 w-full items-center gap-x-3 px-3 rounded-md"
-            href="/login"
-          >
-            <LuLogOut />
-            <span>Log out</span>
-          </Link>
-        ) : (
-          <Link
-            className="bg-purple-600 text-white hover:bg-purple-800 cursor-pointer flex flex-row h-10 w-full items-center gap-x-3 px-3 rounded-md"
-            href="/login"
-          >
-            <LuLogIn />
-            <span>Log in</span>
-          </Link>
-        )}
+        {/* <div className="bg-purple-600 text-white hover:bg-purple-800 cursor-pointer flex flex-row h-10 w-full items-center gap-x-3 px-3 rounded-md">
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div> */}
+        <div className=" cursor-pointer flex flex-row h-10 w-full items-center gap-x-3 px-3 rounded-md">
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
       </DropdownMenuContent>
     </DropdownMenu>
   );

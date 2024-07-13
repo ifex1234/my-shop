@@ -12,8 +12,8 @@ import { Navlink } from "@/lib/assets/navlink";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Separator } from "../ui/separator";
-import { LuLogOut, LuHeart, LuUser, LuBook, LuLogIn } from "react-icons/lu";
-import { useState } from "react";
+import { LuHeart, LuUser, LuBook } from "react-icons/lu";
+import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
 
 export function Drawer() {
   const myAccount = [
@@ -37,7 +37,6 @@ export function Drawer() {
     },
   ];
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -85,23 +84,14 @@ export function Drawer() {
 
         <SheetFooter>
           <SheetClose asChild>
-            {isLoggedIn ? (
-              <Link
-                className="bg-red-500 w-56 text-white hover:bg-red-700 cursor-pointer flex flex-row h-10 items-center gap-x-3 px-3 rounded-md"
-                href="/login"
-              >
-                <LuLogOut />
-                <span>Log out</span>
-              </Link>
-            ) : (
-              <Link
-                className="bg-purple-600 text-white hover:bg-purple-800 w-56 md:w-80 cursor-pointer flex flex-row h-10 items-center gap-x-3 px-3 rounded-md"
-                href="/login"
-              >
-                <LuLogIn />
-                <span>Log in</span>
-              </Link>
-            )}
+            <div className=" cursor-pointer flex flex-row h-10 w-full items-center gap-x-3 px-3 rounded-md">
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </div>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
