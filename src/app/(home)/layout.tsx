@@ -5,7 +5,6 @@ import Footer from "@/components/core/footer";
 import ContextProvider from "@/components/core/ContextProvider";
 import { TopAds } from "@/components/core/ads";
 import Navbar from "@/components/core/navbar";
-import TopNav from "@/components/core/topNav";
 import { Separator } from "@radix-ui/react-separator";
 
 const inter = Inter({ subsets: ["latin"] });

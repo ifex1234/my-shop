@@ -1,7 +1,7 @@
 import image1 from "../../../public/images/carousel/1.png";
-import image7 from "../../../public/images/carousel/3.jpg";
-import image4 from "../../../public/images/carousel/5.png";
-import image5 from "../../../public/images/carousel/6.jpg";
+import image2 from "../../../public/images/carousel/3.jpg";
+import image3 from "../../../public/images/carousel/5.png";
+import image from "../../../public/images/carousel/6.jpg";
 export const CarouselContent = [
   {
     id: 0,
@@ -9,14 +9,14 @@ export const CarouselContent = [
   },
   {
     id: 1,
-    image: image4,
+    image: image,
   },
   {
-    id: 4,
-    image: image5,
+    id: 2,
+    image: image2,
   },
   {
-    id: 6,
-    image: image7,
+    id: 3,
+    image: image3,
   },
 ];
